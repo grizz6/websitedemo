@@ -1,30 +1,23 @@
-Dimension by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# Website Demo
 
+An unmodified copy of **"Dimension"**, a free HTML/CSS/JS one-page site template by [HTML5 UP](https://html5up.net) (CCA 3.0 license), kept here as a demo/starting point rather than original work.
 
-This is Dimension, a fun little one-pager with modal-ized (is that a word?) "pages"
-and a cool depth effect (click on a menu item to see what I mean). Simple, fully
-responsive, and kitted out with all the usual pre-styled elements you'd expect.
-Hope you dig it :)
+## What this actually is
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+Every page still has the template's placeholder Lorem Ipsum copy and stock imagery — no custom content, styling, or logic has been layered on top yet. It's included in this GitHub as a reference for what a quick, template-based static site deploy looks like (there's a GitHub Pages workflow already wired up in `.github/workflows/static.yml`).
 
-(* = not included)
+## How it's built (template internals)
 
-AJ
-aj@lkn.io | @ajlkn
+- **Structure**: a single `index.html` one-pager, with content organized into `<article>` sections (`#intro`, `#work`, `#about`, `#contact`) that a nav bar deep-links to via anchors.
+- **Styling**: SASS source in `assets/sass/`, compiled to `assets/css/main.css`. Organized into `base/` (reset, typography), `components/` (buttons, forms, icons), `layout/` (header, footer, wrapper), and `libs/` (breakpoints, mixins, vendor prefixes) partials — a fairly standard 7-1-style SASS architecture.
+- **Behavior**: `assets/js/main.js` (template interaction logic — panel/modal-style section reveals, the "depth" scroll effect) built on top of `jquery.min.js`, plus `browser.min.js`/`breakpoints.min.js` for feature/viewport detection.
+- **Icons**: bundled Font Awesome webfonts (`assets/webfonts/`).
+- **Deployment**: `.github/workflows/static.yml` pushes the static files straight to GitHub Pages — no build step needed since the CSS is already compiled.
 
+## Code used
 
-Credits:
+HTML5, hand-authored SASS (compiled to plain CSS), vanilla JS + jQuery, Font Awesome. No backend, no framework, no data/algorithmic logic — it's presentation-only template code.
 
-	Demo Images:
-		Unsplash (unsplash.com)
+## Note
 
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other:
-		jQuery (jquery.com)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+Since nothing here has been customized yet, there's no personal "algorithm" or logic to document beyond the template's own scroll/reveal interactions. Treat this repo as scaffolding rather than a finished project.
