@@ -4,7 +4,7 @@
 
 A practice deployment of **"Dimension"**, a free one-page HTML/CSS/JS template by [HTML5 UP](https://html5up.net), published with GitHub Pages at **[grizz6.github.io/websitedemo](https://grizz6.github.io/websitedemo/)**.
 
-This is **not original work**. The template is unmodified: it still has the placeholder Lorem Ipsum text, stock images, and social links. I used it to learn how a static site deploys through a GitHub Actions workflow before building my own portfolio from scratch ([PortfolioWebsite](https://github.com/grizz6/PortfolioWebsite), live at [grishmagajurel.com](https://www.grishmagajurel.com/)).
+This is **not original work**. The template is unmodified: it still has the placeholder Lorem Ipsum text, stock images, and social links. It's kept as a reference for a template-based Pages deploy. My own hand-built site is [PortfolioWebsite](https://github.com/grizz6/PortfolioWebsite), live at [grishmagajurel.com](https://www.grishmagajurel.com/).
 
 ---
 
