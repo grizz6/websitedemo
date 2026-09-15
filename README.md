@@ -1,23 +1,28 @@
 # Website Demo
 
-An unmodified copy of **"Dimension"**, a free HTML/CSS/JS one-page site template by [HTML5 UP](https://html5up.net) (CCA 3.0 license), kept here as a demo/starting point rather than original work.
+## About
 
-## What this actually is
+A practice deployment of **"Dimension"**, a free one-page HTML/CSS/JS template by [HTML5 UP](https://html5up.net), published with GitHub Pages at **[grizz6.github.io/websitedemo](https://grizz6.github.io/websitedemo/)**.
 
-Every page still has the template's placeholder Lorem Ipsum copy and stock imagery — no custom content, styling, or logic has been layered on top yet. It's included in this GitHub as a reference for what a quick, template-based static site deploy looks like (there's a GitHub Pages workflow already wired up in `.github/workflows/static.yml`).
+This is **not original work**. The template is unmodified: it still has the placeholder Lorem Ipsum text, stock images, and social links. I used it to learn how a static site deploys through a GitHub Actions workflow before building my own portfolio from scratch ([PortfolioWebsite](https://github.com/grizz6/PortfolioWebsite), live at [grishmagajurel.com](https://www.grishmagajurel.com/)).
 
-## How it's built (template internals)
+---
 
-- **Structure**: a single `index.html` one-pager, with content organized into `<article>` sections (`#intro`, `#work`, `#about`, `#contact`) that a nav bar deep-links to via anchors.
-- **Styling**: SASS source in `assets/sass/`, compiled to `assets/css/main.css`. Organized into `base/` (reset, typography), `components/` (buttons, forms, icons), `layout/` (header, footer, wrapper), and `libs/` (breakpoints, mixins, vendor prefixes) partials — a fairly standard 7-1-style SASS architecture.
-- **Behavior**: `assets/js/main.js` (template interaction logic — panel/modal-style section reveals, the "depth" scroll effect) built on top of `jquery.min.js`, plus `browser.min.js`/`breakpoints.min.js` for feature/viewport detection.
-- **Icons**: bundled Font Awesome webfonts (`assets/webfonts/`).
-- **Deployment**: `.github/workflows/static.yml` pushes the static files straight to GitHub Pages — no build step needed since the CSS is already compiled.
+## How the template is built
 
-## Code used
+- **Structure:** a single `index.html`. The Intro, Work, About, and Contact sections are `<article>` panels that open as overlays from a centered header nav using `#anchor` links. An Elements panel showing the template's form and typography styles is still in the page, but its nav link is commented out.
+- **Styling:** Sass source in `assets/sass/`, precompiled to `assets/css/main.css`. The source is split into `base/` (reset, page, typography), `components/` (buttons, forms, icons, tables), `layout/` (header, footer, main, background, wrapper), and `libs/` (breakpoints, mixins, variables, vendor prefixes). `noscript.css` is a fallback when JavaScript is disabled.
+- **Behavior:** `assets/js/main.js` handles opening and closing panels, updating the URL hash, and the background blur while a panel is open. It's built on jQuery plus the template's `browser.min.js` and `breakpoints.min.js` helpers.
+- **Icons:** Font Awesome webfonts bundled in `assets/webfonts/`.
 
-HTML5, hand-authored SASS (compiled to plain CSS), vanilla JS + jQuery, Font Awesome. No backend, no framework, no data/algorithmic logic — it's presentation-only template code.
+## Deployment
 
-## Note
+`.github/workflows/static.yml` runs on every push to `main`. It uploads the repository as a Pages artifact and deploys it, with no build step since the CSS is already compiled.
 
-Since nothing here has been customized yet, there's no personal "algorithm" or logic to document beyond the template's own scroll/reveal interactions. Treat this repo as scaffolding rather than a finished project.
+## Run locally
+
+Open `index.html` in a browser.
+
+## Credits & license
+
+Template: **Dimension** by [HTML5 UP](https://html5up.net) (@ajlkn), used under the [Creative Commons Attribution 3.0](https://html5up.net/license) license. See [`LICENSE.txt`](LICENSE.txt). Images and icons are the template's bundled assets.
